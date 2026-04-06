@@ -1,17 +1,17 @@
 const toggle = document.querySelector('.menu-toggle');
-const menu = document.querySelector('.mobile-menu');
+const mobileMenu = document.querySelector('.mobile-menu');
 
-if (toggle && menu) {
+if (toggle && mobileMenu) {
   toggle.addEventListener('click', () => {
     const expanded = toggle.getAttribute('aria-expanded') === 'true';
     toggle.setAttribute('aria-expanded', String(!expanded));
-    menu.style.display = expanded ? 'none' : 'block';
+    mobileMenu.style.display = expanded ? 'none' : 'block';
   });
 
-  menu.querySelectorAll('a').forEach(link => {
+  mobileMenu.querySelectorAll('a').forEach((link) => {
     link.addEventListener('click', () => {
+      mobileMenu.style.display = 'none';
       toggle.setAttribute('aria-expanded', 'false');
-      menu.style.display = 'none';
     });
   });
 }
