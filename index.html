@@ -1,372 +1,282 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Honestech Mobile Mechanic | We Come to You</title>
-  <meta name="description" content="Honestech Mobile Mechanic provides simple, on-site auto repair and roadside help across Central New Jersey.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Honestech Mobile Mechanic</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+body {
+  margin:0;
+  font-family:Poppins;
+  background:#0f0f0f;
+  color:white;
+}
+
+/* HEADER */
+header {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px;
+  background:#111;
+  position:sticky;
+  top:0;
+}
+
+header img {
+  height:50px;
+}
+
+nav a {
+  margin:0 10px;
+  text-decoration:none;
+  color:white;
+}
+
+.btn {
+  background:#f5c518;
+  padding:8px 15px;
+  color:black;
+  border-radius:6px;
+}
+
+/* HERO */
+.hero {
+  background:url('https://images.unsplash.com/photo-1580273916550-e323be2ae537') center/cover;
+  height:80vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+
+.overlay {
+  background:rgba(0,0,0,0.7);
+  padding:40px;
+}
+
+.hero h1 {
+  font-size:32px;
+}
+
+/* SECTIONS */
+section {
+  padding:40px 20px;
+  text-align:center;
+}
+
+.grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+
+/* CARDS */
+.card {
+  background:#1a1a1a;
+  border-radius:10px;
+  overflow:hidden;
+}
+
+.card img {
+  width:100%;
+}
+
+.card h3 {
+  margin:10px 0;
+}
+
+/* FORM */
+.quote {
+  max-width:600px;
+  margin:auto;
+}
+
+.quote input,
+.quote select,
+.quote textarea {
+  width:100%;
+  padding:12px;
+  margin:10px 0;
+  border:none;
+  border-radius:6px;
+}
+
+.quote button {
+  width:100%;
+  padding:15px;
+  background:#f5c518;
+  border:none;
+  font-weight:bold;
+}
+
+.notice {
+  color:#f5c518;
+  font-size:14px;
+}
+
+.disclaimer {
+  font-size:12px;
+  color:#aaa;
+}
+
+/* MOBILE BAR */
+.mobile-bar {
+  position:fixed;
+  bottom:0;
+  width:100%;
+  display:flex;
+}
+
+.mobile-bar a {
+  flex:1;
+  padding:15px;
+  text-align:center;
+  background:#f5c518;
+  color:black;
+  text-decoration:none;
+}
+
+</style>
 </head>
+
 <body>
-  <header class="site-header">
-    <div class="container nav-wrap">
-      <a class="brand" href="#top" aria-label="Honestech home">
-        <img class="brand-logo" src="https://i.postimg.cc/YCyfQcDp/IMG-8479.png" alt="Honestech Mobile Mechanic logo">
-      </a>
 
-      <button class="menu-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
-        <span></span><span></span><span></span>
-      </button>
+<!-- HEADER -->
+<header>
+  <img src="https://i.postimg.cc/YCyfQcDp/IMG-8479.png">
+  <nav>
+    <a href="#services">Services</a>
+    <a href="#quote" class="btn">Get Quote</a>
+    <a href="tel:17329373734">Call</a>
+  </nav>
+</header>
 
-      <nav class="desktop-nav" aria-label="Primary">
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#process">How It Works</a>
-        <a href="#quote">Quote</a>
-        <a href="#faq">FAQ</a>
-      </nav>
-
-      <div class="header-cta">
-        <a class="phone-link" href="tel:7329373734">Call / Text 732-937-3734</a>
-        <a class="btn btn-primary" href="#quote">Get a Quote</a>
-      </div>
-    </div>
-
-    <div class="mobile-menu" id="mobile-menu">
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#process">How It Works</a>
-      <a href="#quote">Get a Quote</a>
-      <a href="#faq">FAQ</a>
-      <a href="tel:7329373734">Call / Text</a>
-    </div>
-  </header>
-
-  <main id="top">
-    <section class="hero">
-      <div class="hero-overlay"></div>
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <p class="eyebrow">Mobile Mechanic Service in Central New Jersey</p>
-          <h1>Simple, honest car service that comes to you.</h1>
-          <p class="hero-text">
-            Honestech Mobile Mechanic helps customers with common vehicle repairs and roadside services at home,
-            work, or a safe roadside location. We keep the process simple, explain what we do clearly, and make it easier
-            to get your vehicle serviced without a shop visit.
-          </p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#quote">Request a Quote</a>
-            <a class="btn btn-secondary" href="tel:7329373734">Call Now</a>
-          </div>
-          <div class="trust-row">
-            <span>Mobile Service</span>
-            <span>Clear Communication</span>
-            <span>Common Repairs</span>
-            <span>Roadside Help</span>
-          </div>
-        </div>
-
-        <aside class="hero-card">
-          <div class="hero-card-inner">
-            <p class="card-label">What we provide</p>
-            <ul>
-              <li>Oil change and maintenance</li>
-              <li>Brake service</li>
-              <li>Starter and alternator replacement</li>
-              <li>Jump starts and flat tire changes</li>
-              <li>Basic diagnostics</li>
-              <li>Pre-purchase inspections and tune-ups</li>
-            </ul>
-          </div>
-        </aside>
-      </div>
-    </section>
-
-    <section class="quick-stats" id="about">
-      <div class="container stats-grid">
-        <article>
-          <strong>Who we are</strong>
-          <p>A mobile mechanic service focused on convenience and honest communication.</p>
-        </article>
-        <article>
-          <strong>What we do</strong>
-          <p>Common maintenance, repair, roadside help, and vehicle inspections.</p>
-        </article>
-        <article>
-          <strong>Where we work</strong>
-          <p>At your home, workplace, or another safe location for service.</p>
-        </article>
-        <article>
-          <strong>How we charge</strong>
-          <p>Labor-focused service with customer-supplied parts unless discussed otherwise.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section" id="services">
-      <div class="container">
-        <div class="section-head">
-          <p class="eyebrow">Services</p>
-          <h2>Easy-to-understand services</h2>
-          <p>
-            We handle common services customers ask for most often. If your job is different, use the “Other” option in the quote form.
-          </p>
-        </div>
-
-        <div class="cards-grid service-image-grid">
-          <article class="service-image-card">
-            <img src="https://i.postimg.cc/XqJQkywJ/IMG-5411.png" alt="Brake rotor service">
-            <div class="service-copy">
-              <h3>Brakes</h3>
-              <p>Brake pad and rotor service to help keep your vehicle safe and stopping properly.</p>
-            </div>
-          </article>
-
-          <article class="service-image-card">
-            <img src="https://i.postimg.cc/T2cF8wH2/Untitled_design.png" alt="Pre-purchase inspection illustration">
-            <div class="service-copy">
-              <h3>Pre-Purchase Inspections</h3>
-              <p>A visual and basic functional inspection before you buy a vehicle, so you have a better idea of its condition.</p>
-            </div>
-          </article>
-
-          <article class="service-image-card">
-            <img src="https://i.postimg.cc/Gtbf8w9T/IMG_6681.png" alt="Tune-up illustration">
-            <div class="service-copy">
-              <h3>Tune-Ups</h3>
-              <p>Basic tune-up service to help your vehicle run smoother and stay maintained.</p>
-            </div>
-          </article>
-        </div>
-
-        <div class="cards-grid services-grid secondary-services">
-          <article class="card">
-            <div class="icon">🛢️</div>
-            <h3>Oil Change / Maintenance</h3>
-            <p>Routine service to help keep your engine protected and your vehicle maintained.</p>
-          </article>
-          <article class="card">
-            <div class="icon">🔧</div>
-            <h3>Starter</h3>
-            <p>Starter replacement and related no-crank service when the vehicle will not turn over properly.</p>
-          </article>
-          <article class="card">
-            <div class="icon">⚡</div>
-            <h3>Alternator</h3>
-            <p>Charging-system repair when the battery is not staying charged or the vehicle is losing power.</p>
-          </article>
-          <article class="card">
-            <div class="icon">🔍</div>
-            <h3>Diagnostics</h3>
-            <p>Some diagnostic work for check engine lights, no-start issues, charging problems, and other common concerns.</p>
-          </article>
-          <article class="card">
-            <div class="icon">🔋</div>
-            <h3>Jump Start</h3>
-            <p>Quick mobile help for a dead battery situation so you can get moving again.</p>
-          </article>
-          <article class="card">
-            <div class="icon">🛞</div>
-            <h3>Flat Tire Change</h3>
-            <p>Flat tire change to your spare if the vehicle is equipped with one and the conditions are safe.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-dark" id="process">
-      <div class="container">
-        <div class="section-head center">
-          <p class="eyebrow">How It Works</p>
-          <h2>A simple process for customers</h2>
-        </div>
-        <div class="steps-grid">
-          <article class="step-card">
-            <span class="step-number">1</span>
-            <h3>Send your request</h3>
-            <p>Tell us who you are, where the vehicle is, and what service you need.</p>
-          </article>
-          <article class="step-card">
-            <span class="step-number">2</span>
-            <h3>We review it</h3>
-            <p>We look over the request, contact you if needed, and go over the next step.</p>
-          </article>
-          <article class="step-card">
-            <span class="step-number">3</span>
-            <h3>We service the vehicle</h3>
-            <p>Service is done at a safe and accessible location when the job is confirmed.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container feature-split">
-        <div>
-          <p class="eyebrow">Payment Methods</p>
-          <h2>Ways customers can pay</h2>
-          <div class="payment-tags">
-            <span>Cash</span>
-            <span>PayPal</span>
-            <span>Zelle</span>
-            <span>Cashapp</span>
-            <span>Venmo</span>
-            <span>Credit card upon request</span>
-          </div>
-          <p class="travel-note">Credit card payments are subject to fees.</p>
-        </div>
-
-        <div class="highlight-panel">
-          <p class="panel-label">Service note</p>
-          <h3>Safe work area required</h3>
-          <p>
-            Please make sure the vehicle is parked in a safe and accessible place with enough room to work around it.
-            This helps keep the service safer for both the customer and the mechanic.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section quote-section" id="quote">
-      <div class="container quote-grid">
-        <div>
-          <p class="eyebrow">Request a Quote</p>
-          <h2>Tell us about the job</h2>
-          <p>
-            This form sends your request to Honestech and is set up so it can also be tied into your Google Calendar workflow.
-          </p>
-
-          <div class="payment-box">
-            <strong>Reminder</strong>
-            <small>
-              Please ensure the vehicle is in a safe place that allows us to work on it.
-            </small>
-          </div>
-        </div>
-
-        <form class="quote-form" action="https://formsubmit.co/honestechservice@gmail.com" method="POST">
-          <input type="hidden" name="_subject" value="New Honestech Service Request">
-          <input type="hidden" name="_captcha" value="false">
-          <input type="hidden" name="_template" value="table">
-          <input type="hidden" name="_webhook" value="PASTE_YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE">
-          <input type="text" name="_honey" class="hidden-field" tabindex="-1" autocomplete="off">
-
-          <div class="form-grid">
-            <label>
-              Customer Name
-              <input type="text" name="customer_name" required>
-            </label>
-            <label>
-              Phone Number
-              <input type="tel" name="phone" required>
-            </label>
-            <label>
-              Email Address
-              <input type="email" name="email" required>
-            </label>
-            <label>
-              Vehicle Location Address
-              <input type="text" name="address" required>
-            </label>
-          </div>
-
-          <label>
-            Service Option
-            <select name="service_option" required>
-              <option value="">Select service</option>
-              <option>Oil change / maintenance</option>
-              <option>Brakes</option>
-              <option>Starter</option>
-              <option>Alternator</option>
-              <option>Jump Start</option>
-              <option>Flat Tire change/to spare if equipped</option>
-              <option>Other</option>
-            </select>
-          </label>
-
-          <label>
-            Other / Description
-            <textarea name="description" rows="5" placeholder="Describe the issue, symptoms, or service needed"></textarea>
-          </label>
-
-          <div class="notice-box">
-            <strong>Important:</strong> Please make sure the vehicle is parked in a safe and accessible location for service.
-          </div>
-
-          <label class="checkbox-row">
-            <input type="checkbox" name="customer_acknowledgement" required>
-            <span>
-              I understand Honestech Mobile Mechanic is not responsible for issues that existed before service.
-              I agree that I am responsible for purchasing necessary parts unless otherwise discussed.
-            </span>
-          </label>
-
-          <button class="btn btn-primary submit-btn" type="submit">Submit Request</button>
-        </form>
-      </div>
-    </section>
-
-    <section class="section" id="faq">
-      <div class="container faq-layout">
-        <div>
-          <p class="eyebrow">FAQ</p>
-          <h2>Common questions</h2>
-          <p>These answers keep things simple and set clear expectations for customers.</p>
-        </div>
-
-        <div class="faq-list">
-          <details open>
-            <summary>Do you provide parts?</summary>
-            <p>Customers agree to purchase necessary parts unless other arrangements are discussed in advance.</p>
-          </details>
-          <details>
-            <summary>Do you do diagnostics?</summary>
-            <p>Yes. We do some diagnostic work for common problems like check engine lights, charging issues, and no-start concerns.</p>
-          </details>
-          <details>
-            <summary>How do I pay?</summary>
-            <p>Cash, PayPal, Zelle, Cashapp, and Venmo. Credit card is available upon request and subject to fees.</p>
-          </details>
-          <details>
-            <summary>Where can the vehicle be serviced?</summary>
-            <p>The vehicle needs to be in a safe and accessible place that allows room to work around it.</p>
-          </details>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <img class="footer-logo" src="https://i.postimg.cc/YCyfQcDp/IMG-8479.png" alt="Honestech logo">
-        <p>Simple mobile mechanic service with clear communication and convenient on-site support.</p>
-      </div>
-      <div>
-        <h4>Contact</h4>
-        <a href="tel:7329373734">732-937-3734</a>
-        <a href="mailto:honestechservice@gmail.com">honestechservice@gmail.com</a>
-      </div>
-      <div>
-        <h4>Quick Links</h4>
-        <a href="#services">Services</a>
-        <a href="#quote">Quote</a>
-        <a href="#faq">FAQ</a>
-      </div>
-    </div>
-    <div class="container footer-bottom">
-      <p>© 2026 Honestech Mobile Mechanic</p>
-    </div>
-  </footer>
-
-  <div class="mobile-bar">
-    <a href="tel:7329373734">Call</a>
-    <a href="#quote">Quote</a>
+<!-- HERO -->
+<section class="hero">
+  <div class="overlay">
+    <h1>Mobile Mechanic Service That Comes to You</h1>
+    <p>Honestech provides mobile automotive repair at your home, job, or roadside. Simple, honest, and convenient service.</p>
+    <br>
+    <a href="#quote" class="btn">Get Your Quote</a>
   </div>
+</section>
 
-  <script src="script.js"></script>
+<!-- SERVICES -->
+<section id="services">
+  <h2>Our Services</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <img src="https://i.postimg.cc/XqJQkywJ/IMG-5411.png">
+      <h3>Brake Rotors</h3>
+      <p>Rotor replacement done on-site.</p>
+    </div>
+
+    <div class="card">
+      <img src="https://i.postimg.cc/fyLBf0xY/IMG_5412.png">
+      <h3>Brake Pads</h3>
+      <p>Safe and reliable brake pad service.</p>
+    </div>
+
+    <div class="card">
+      <img src="https://i.postimg.cc/T2cF8wH2/Untitled_design.png">
+      <h3>Pre-Purchase Inspection</h3>
+      <p>Know what you're buying before you commit.</p>
+    </div>
+
+    <div class="card">
+      <img src="https://i.postimg.cc/Gtbf8w9T/IMG_6681.png">
+      <h3>Tune Ups</h3>
+      <p>Keep your vehicle running strong.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- EXPLANATION -->
+<section>
+  <h2>What We Do</h2>
+  <p>
+    Honestech Mobile Mechanic brings professional automotive service directly to you.  
+    We handle maintenance, repairs, and some diagnostic work without the hassle of a shop visit.
+  </p>
+</section>
+
+<!-- PAYMENT -->
+<section>
+  <h2>Payment Methods</h2>
+  <p>
+    Cash, PayPal, Zelle, Cashapp, Venmo.<br>
+    Credit card upon request (subject to fees).
+  </p>
+</section>
+
+<!-- QUOTE FORM -->
+<section id="quote" class="quote">
+
+  <h2>Request a Service Quote</h2>
+
+  <form action="https://formsubmit.co/honestechservice@gmail.com" method="POST">
+
+    <!-- WEBHOOK -->
+    <input type="hidden" name="_webhook" value="https://script.google.com/macros/s/AKfycbzLOXp1tUIAyQsOs3Qb6tDHhxlfkz-KFNwMEi3AqYoQm72Y0R0CYlY9N5V0jCCKGa88/exec">
+
+    <input type="hidden" name="_subject" value="New Honestech Service Request">
+    <input type="hidden" name="_captcha" value="false">
+
+    <input type="text" name="name" placeholder="Full Name" required>
+    <input type="tel" name="phone" placeholder="Phone Number" required>
+    <input type="email" name="email" placeholder="Email Address" required>
+
+    <input type="text" name="address" placeholder="Vehicle Address" required>
+    <input type="text" name="city" placeholder="City" required>
+
+    <select name="service" required>
+      <option value="">Select Service</option>
+      <option>Oil Change / Maintenance</option>
+      <option>Brakes</option>
+      <option>Starter</option>
+      <option>Alternator</option>
+      <option>Jump Start</option>
+      <option>Flat Tire Change (to spare if equipped)</option>
+      <option>Some Diagnostic Work</option>
+      <option>Other</option>
+    </select>
+
+    <textarea name="description" placeholder="Describe the issue"></textarea>
+
+    <p class="notice">
+      Please ensure the vehicle is in a safe and accessible location.
+    </p>
+
+    <p class="disclaimer">
+      Honestech is not responsible for pre-existing issues. Customer agrees to purchase necessary parts unless discussed. Additional issues may result in additional charges.
+    </p>
+
+    <button type="submit">Submit Request</button>
+
+  </form>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <img src="https://i.postimg.cc/YCyfQcDp/IMG-8479.png" style="height:60px;">
+  <p>Honestech Mobile Mechanic</p>
+  <p>732-937-3734</p>
+  <p>© 2026 Honestech</p>
+</footer>
+
+<!-- MOBILE BAR -->
+<div class="mobile-bar">
+  <a href="tel:17329373734">Call</a>
+  <a href="#quote">Quote</a>
+</div>
+
 </body>
 </html>
